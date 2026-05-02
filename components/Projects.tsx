@@ -1,5 +1,5 @@
 'use client';
-import { Box, Container, Typography, Grid, Card, CardContent, CardActions, Button } from '@mui/material';
+import { Box, Container, Typography, Card, CardContent, CardActions, Button } from '@mui/material';
 
 export default function Projects() {
   return (
@@ -8,8 +8,8 @@ export default function Projects() {
         <Typography variant="h4" component="h2" sx={{ textAlign: 'center' }} gutterBottom>
           Projects
         </Typography>
-        <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
-          <Grid item xs={12} sm={6} md={4}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 4, justifyContent: 'center' }}>
+          <Box>
             <Card sx={{ bgcolor: 'grey.700', color: 'white' }}>
               <CardContent>
                 <Typography variant="h5" component="h3" gutterBottom>
@@ -24,8 +24,8 @@ export default function Projects() {
                 <Button size="small" href="https://github.com/bercho001-cpu/estudiar-mucho" target="_blank" rel="noopener noreferrer">GitHub</Button>
               </CardActions>
             </Card>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
