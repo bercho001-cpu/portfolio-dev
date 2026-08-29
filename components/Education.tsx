@@ -20,7 +20,7 @@ export default function Education() {
         </Typography>
         <Grid container spacing={4}>
           {/* Formación Académica */}
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Card sx={{ bgcolor: 'grey.700', color: 'white', height: '100%', borderLeft: '4px solid #1976d2' }}>
               <CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -46,7 +46,7 @@ export default function Education() {
           </Grid>
 
           {/* Formación Complementaria */}
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Card sx={{ bgcolor: 'grey.700', color: 'white', height: '100%', borderLeft: '4px solid #9c27b0' }}>
               <CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -62,10 +62,16 @@ export default function Education() {
                         <WorkspacePremiumIcon sx={{ color: '#9c27b0', fontSize: 20 }} />
                       </ListItemIcon>
                       <ListItemText 
-                        primary={formation.split(' — ')[0]} 
-                        secondary={formation.split(' — ')[1]}
-                        primaryTypographyProps={{ style: { color: 'white', fontWeight: 500 } }}
-                        secondaryTypographyProps={{ style: { color: '#b55fe6' } }}
+                        primary={
+                          <Typography component="span" sx={{ color: 'white', fontWeight: 500, display: 'block', fontSize: '0.875rem' }}>
+                            {formation.split(' — ')[0]}
+                          </Typography>
+                        }
+                        secondary={
+                          <Typography component="span" sx={{ color: '#b55fe6', display: 'block', fontSize: '0.75rem' }}>
+                            {formation.split(' — ')[1]}
+                          </Typography>
+                        }
                       />
                     </ListItem>
                   ))}
