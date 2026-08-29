@@ -1,7 +1,5 @@
 // components/Contact.tsx
 
-  // Rest of the code
-  
 'use client';
 import { Box, Container, Typography, Link, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -19,7 +17,7 @@ export default function Contact() {
           bercho001@gmail.com
         </Typography>
         <Typography variant="body1" gutterBottom>
-          +542944781823
+          +54 2944 79-6292
         </Typography>
         <Box>
           <IconButton color="inherit" href="https://www.linkedin.com/in/fernando-soria-a966903b3/" target="_blank" rel="noopener noreferrer">

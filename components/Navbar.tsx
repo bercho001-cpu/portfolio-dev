@@ -10,6 +10,7 @@ export default function Navbar() {
         </Typography>
         <Button color="inherit" href="#projects">Projects</Button>
         <Button color="inherit" href="#stack">Stack</Button>
+        <Button color="inherit" href="#education">Education</Button>
         <Button color="inherit" href="#contact">Contact</Button>
       </Toolbar>
     </AppBar>
