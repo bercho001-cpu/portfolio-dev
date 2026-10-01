@@ -20,10 +20,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Box id="projects" sx={{ py: 8, bgcolor: 'grey.800' }}>
+    <Box id="proyectos" sx={{ py: 8, bgcolor: 'grey.800' }}>
       <Container>
         <Typography variant="h4" component="h2" sx={{ textAlign: 'center' }} gutterBottom>
-          Projects
+          Proyectos
         </Typography>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 4, justifyContent: 'center' }}>
           {projects.map((project, index) => (
@@ -45,8 +45,8 @@ export default function Projects() {
                   </Typography>
                 </CardContent>
                 <CardActions sx={{ mt: 'auto' }}>
-                  <Button size="small" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Preview</Button>
-                  <Button size="small" href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</Button>
+                  <Button size="small" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Ver demo</Button>
+                  <Button size="small" href={project.githubUrl} target="_blank" rel="noopener noreferrer">Código</Button>
                 </CardActions>
               </Card>
             </Box>

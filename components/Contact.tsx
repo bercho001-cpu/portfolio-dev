@@ -51,17 +51,17 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Client-side validation
+    // Validación en el cliente
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus('error');
-      setFeedbackMessage('Please fill in all required fields (Name, Email, and Message).');
+      setFeedbackMessage('Por favor, completá todos los campos obligatorios (Nombre, Email y Mensaje).');
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email.trim())) {
       setStatus('error');
-      setFeedbackMessage('Please enter a valid email address.');
+      setFeedbackMessage('Por favor, ingresá un correo electrónico válido.');
       return;
     }
 
@@ -80,11 +80,11 @@ export default function Contact() {
       const result = await response.json().catch(() => null);
 
       if (!response.ok) {
-        throw new Error(result?.error || 'Failed to send your message. Please try again later.');
+        throw new Error(result?.error || 'No se pudo enviar el mensaje. Por favor, intentá de nuevo más tarde.');
       }
 
       setStatus('success');
-      setFeedbackMessage('Thank you! Your message has been sent successfully. I will get back to you soon.');
+      setFeedbackMessage('¡Muchas gracias! Tu mensaje fue enviado con éxito. Te voy a responder a la brevedad.');
       setFormData({
         name: '',
         email: '',
@@ -96,21 +96,21 @@ export default function Contact() {
       setFeedbackMessage(
         err instanceof Error
           ? err.message
-          : 'Failed to send your message. Please try again or contact me directly via email.'
+          : 'No se pudo enviar tu mensaje. Por favor, intentá nuevamente o escribime directo por email.'
       );
     }
   };
 
   return (
-    <Box id="contact" sx={{ py: { xs: 8, md: 10 }, bgcolor: 'grey.800', color: 'white' }}>
+    <Box id="contacto" sx={{ py: { xs: 8, md: 10 }, bgcolor: 'grey.800', color: 'white' }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: { xs: 5, md: 7 } }}>
           <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold' }} gutterBottom>
-            Get In Touch
+            Contactame
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.300', maxWidth: 600, mx: 'auto' }}>
-            Have a project in mind, a question, or want to explore collaboration opportunities?
-            Feel free to send a message or reach out directly!
+            ¿Tenés un proyecto en mente, alguna consulta o querés explorar oportunidades de trabajo?
+            Escribime un mensaje o contactame directamente.
           </Typography>
         </Box>
 
@@ -122,7 +122,7 @@ export default function Contact() {
             alignItems: 'start',
           }}
         >
-          {/* Left Column: Direct Info & Socials */}
+          {/* Columna Izquierda: Información de Contacto y Redes */}
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             <Paper
               elevation={0}
@@ -135,10 +135,10 @@ export default function Contact() {
               }}
             >
               <Typography variant="h5" component="h3" sx={{ fontWeight: 600 }} gutterBottom>
-                Contact Details
+                Datos de contacto
               </Typography>
               <Typography variant="body2" sx={{ color: 'grey.400', mb: 3 }}>
-                I am currently open to freelance opportunities, frontend/full-stack roles, and interesting projects.
+                Actualmente estoy disponible para proyectos freelance, roles frontend/full-stack y nuevas propuestas.
               </Typography>
 
               <Stack spacing={2.5}>
@@ -182,7 +182,7 @@ export default function Contact() {
                   </Box>
                   <Box>
                     <Typography variant="caption" sx={{ color: 'grey.400', display: 'block' }}>
-                      Phone / WhatsApp
+                      Teléfono / WhatsApp
                     </Typography>
                     <MuiLink
                       href="tel:+542944796292"
@@ -208,10 +208,10 @@ export default function Contact() {
                   </Box>
                   <Box>
                     <Typography variant="caption" sx={{ color: 'grey.400', display: 'block' }}>
-                      Location
+                      Ubicación
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'white', fontWeight: 500 }}>
-                      Bariloche, Argentina &bull; Remote Worldwide
+                      Bariloche, Argentina &bull; Remoto a todo el mundo
                     </Typography>
                   </Box>
                 </Box>
@@ -219,7 +219,7 @@ export default function Contact() {
 
               <Box sx={{ mt: 4, pt: 3, borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
                 <Typography variant="subtitle2" sx={{ color: 'grey.400', mb: 1.5 }}>
-                  Connect on Social Media
+                  Redes sociales
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 1 }}>
                   <IconButton
@@ -227,7 +227,7 @@ export default function Contact() {
                     href="https://www.linkedin.com/in/fernando-soria-a966903b3/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Fernando Soria on LinkedIn"
+                    aria-label="LinkedIn de Fernando Soria"
                     sx={{
                       bgcolor: 'rgba(255, 255, 255, 0.05)',
                       '&:hover': { bgcolor: 'rgba(25, 118, 210, 0.25)' },
@@ -240,7 +240,7 @@ export default function Contact() {
                     href="https://github.com/bercho001-cpu"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Fernando Soria on GitHub"
+                    aria-label="GitHub de Fernando Soria"
                     sx={{
                       bgcolor: 'rgba(255, 255, 255, 0.05)',
                       '&:hover': { bgcolor: 'rgba(25, 118, 210, 0.25)' },
@@ -253,7 +253,7 @@ export default function Contact() {
                     href="https://www.instagram.com/fersoria.1/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Fernando Soria on Instagram"
+                    aria-label="Instagram de Fernando Soria"
                     sx={{
                       bgcolor: 'rgba(255, 255, 255, 0.05)',
                       '&:hover': { bgcolor: 'rgba(25, 118, 210, 0.25)' },
@@ -266,7 +266,7 @@ export default function Contact() {
             </Paper>
           </Box>
 
-          {/* Right Column: Contact Form */}
+          {/* Columna Derecha: Formulario de Contacto */}
           <Paper
             component="form"
             onSubmit={handleSubmit}
@@ -280,10 +280,10 @@ export default function Contact() {
             }}
           >
             <Typography variant="h5" component="h3" sx={{ fontWeight: 600 }} gutterBottom>
-              Send a Message
+              Mandame un mensaje
             </Typography>
             <Typography variant="body2" sx={{ color: 'grey.400', mb: 3 }}>
-              Leave your details below and I&apos;ll get in touch with you directly via email.
+              Completá el formulario y te respondo a la brevedad por correo electrónico.
             </Typography>
 
             {status === 'success' && (
@@ -311,8 +311,8 @@ export default function Contact() {
                   required
                   id="contact-name"
                   name="name"
-                  label="Your Name"
-                  placeholder="e.g. John Doe"
+                  label="Tu nombre"
+                  placeholder="Ej: Juan Pérez"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={status === 'loading'}
@@ -325,8 +325,8 @@ export default function Contact() {
                   id="contact-email"
                   name="email"
                   type="email"
-                  label="Your Email"
-                  placeholder="e.g. john@example.com"
+                  label="Tu email"
+                  placeholder="Ej: juan@ejemplo.com"
                   value={formData.email}
                   onChange={handleChange}
                   disabled={status === 'loading'}
@@ -339,8 +339,8 @@ export default function Contact() {
                 fullWidth
                 id="contact-subject"
                 name="subject"
-                label="Subject"
-                placeholder="e.g. Project Inquiry / Web Development"
+                label="Asunto"
+                placeholder="Ej: Consulta por desarrollo web / proyecto"
                 value={formData.subject}
                 onChange={handleChange}
                 disabled={status === 'loading'}
@@ -353,8 +353,8 @@ export default function Contact() {
                 required
                 id="contact-message"
                 name="message"
-                label="Message"
-                placeholder="Tell me about your project, timeline, or whatever is on your mind..."
+                label="Mensaje"
+                placeholder="Contame sobre tu proyecto, plazos, requerimientos o lo que tengas en mente..."
                 value={formData.message}
                 onChange={handleChange}
                 disabled={status === 'loading'}
@@ -383,7 +383,7 @@ export default function Contact() {
                   borderRadius: 1.5,
                 }}
               >
-                {status === 'loading' ? 'Sending Message...' : 'Send Message'}
+                {status === 'loading' ? 'Enviando mensaje...' : 'Enviar mensaje'}
               </Button>
             </Stack>
           </Paper>

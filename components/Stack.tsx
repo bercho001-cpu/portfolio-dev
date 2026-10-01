@@ -20,7 +20,7 @@ export default function Stack() {
     <Box id="stack" sx={{ py: 8, bgcolor: 'grey.900' }}>
       <Container>
         <Typography variant="h4" component="h2" sx={{ textAlign: 'center' }} gutterBottom>
-          My Stack
+          Mi Stack
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1 }}>
           {skills.map((skill) => (

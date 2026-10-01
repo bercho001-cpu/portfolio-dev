@@ -18,7 +18,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Fernando Soria - Portfolio",
-  description: "Portfolio of Fernando Soria, a Full Stack Developer.",
+  description: "Portfolio de Fernando Soria, Desarrollador Full Stack.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es-AR">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <body suppressHydrationWarning>{children}</body>

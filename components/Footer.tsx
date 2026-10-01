@@ -14,7 +14,7 @@ export default function Footer() {
     <Box component="footer" sx={{ py: 3, bgcolor: 'grey.900', color: 'white' }}>
       <Container sx={{ textAlign: 'center' }}>
         <Typography variant="body2">
-          &copy; {new Date().getFullYear()} Fernando Soria. All rights reserved.
+          &copy; {new Date().getFullYear()} Fernando Soria. Todos los derechos reservados.
         </Typography>
       </Container>
     </Box>

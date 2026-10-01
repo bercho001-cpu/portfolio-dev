@@ -115,12 +115,12 @@ export default function Hero() {
           Fernando Soria
         </Typography>
         <Typography variant="h5" component="p" gutterBottom sx={{ mb: 4, color: 'grey.300', fontWeight: 300, textShadow: '0 0 10px rgba(255,255,255,0.2)' }}>
-          Full Stack Developer
+          Desarrollador Full Stack
         </Typography>
         <Button 
           variant="contained" 
           color="primary" 
-          href="#projects" 
+          href="#proyectos" 
           size="large"
           sx={{
             borderRadius: '50px',
@@ -133,7 +133,7 @@ export default function Hero() {
             '&:hover': { boxShadow: '0 0 25px rgba(25, 118, 210, 0.8)' }
           }}
         >
-          View My Work
+          Ver mis proyectos
         </Button>
       </Container>
     </Box>

@@ -8,10 +8,10 @@ export default function Navbar() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <a href="#" style={{ textDecoration: 'none', color: 'inherit' }}>Fernando Soria</a>
         </Typography>
-        <Button color="inherit" href="#projects">Projects</Button>
+        <Button color="inherit" href="#proyectos">Proyectos</Button>
         <Button color="inherit" href="#stack">Stack</Button>
-        <Button color="inherit" href="#education">Education</Button>
-        <Button color="inherit" href="#contact">Contact</Button>
+        <Button color="inherit" href="#educacion">Educación</Button>
+        <Button color="inherit" href="#contacto">Contacto</Button>
       </Toolbar>
     </AppBar>
   );

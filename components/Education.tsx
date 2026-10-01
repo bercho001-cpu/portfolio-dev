@@ -13,10 +13,10 @@ const complementaryFormations = [
 
 export default function Education() {
   return (
-    <Box id="education" sx={{ py: 8, bgcolor: 'grey.800', color: 'white' }}>
+    <Box id="educacion" sx={{ py: 8, bgcolor: 'grey.800', color: 'white' }}>
       <Container>
         <Typography variant="h4" component="h2" sx={{ textAlign: 'center', mb: 6 }} gutterBottom>
-          Education
+          Educación
         </Typography>
         <Grid container spacing={4}>
           {/* Formación Académica */}
